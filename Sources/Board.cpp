@@ -96,8 +96,7 @@ void Board::draw(sf::RenderWindow * app_pointer){
         food.draw(app_pointer);
     }
     player.draw(app_pointer);
-    root.draw(app_pointer);
-    //player.draw(&app);
+    // root.draw(app_pointer);
 }
 
 void Board::update(bool is_game_paused){
