@@ -156,9 +156,6 @@ void Snake::handleEvents(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
         this->setDirection(1);
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
-        this->addNewPart();
-    }
 }
 
 
