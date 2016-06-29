@@ -31,3 +31,4 @@
 # My own
 /obj
 /bin
+/build/*

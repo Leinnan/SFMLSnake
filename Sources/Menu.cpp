@@ -8,7 +8,7 @@ Menu::Menu(sf::Vector2f start_pos)
 {
     position.x = start_pos.x;
     position.y = start_pos.y;
-    font_object.loadFromFile("Graphics/font.ttf");
+    font_object.loadFromFile("../Graphics/font.ttf");
 }
 
 Menu::~Menu()

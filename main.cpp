@@ -32,7 +32,7 @@ int main(){
     MainMenu.setCenteredToView(view);
 
     sf::Texture background_texture;
-    background_texture.loadFromFile("Graphics/bg.png");
+    background_texture.loadFromFile("../Graphics/bg.png");
 
     sf::Sprite menu_background(background_texture);
 

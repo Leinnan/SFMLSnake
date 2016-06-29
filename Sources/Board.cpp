@@ -26,7 +26,7 @@ Board::Board()
     border_box.setOutlineThickness(2.f);
     foods.push_back(Food(sf::Vector2f(default_margin+50,default_margin+50),10));
 
-    font_object.loadFromFile("Graphics/font.ttf");
+    font_object.loadFromFile("../Graphics/font.ttf");
     points_label.setFont(font_object);
     points_label.setString("New game");
     points_label.setCharacterSize(20);
