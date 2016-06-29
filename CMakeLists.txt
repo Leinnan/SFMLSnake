@@ -26,6 +26,9 @@ include_directories(Sources)
 include_directories(Sources/)
 file(GLOB_RECURSE SOURCES Sources/*)
 
+set (CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic")
+
+
 # Define sources and executable
 set(EXECUTABLE_NAME "SFMLSnake")
 add_executable(${EXECUTABLE_NAME} ${SOURCES} main.cpp)
