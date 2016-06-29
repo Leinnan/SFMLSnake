@@ -90,7 +90,7 @@ void Menu::handleEvents(){
         return;
 
     if(time_to_next_press < 1){
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
             if(selected_option_nr <= 0)
                 selected_option_nr = labels.size() - 1;
             else
@@ -98,7 +98,7 @@ void Menu::handleEvents(){
             this->updateState();
             time_to_next_press = 10;
         }
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
             if(selected_option_nr >= labels.size() - 1)
                 selected_option_nr = 0;
             else
