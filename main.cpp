@@ -13,7 +13,7 @@
 int main(){
 
     // Create the main window
-    sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
+    sf::RenderWindow app(sf::VideoMode(960, 540), "SFML window");
     app.setFramerateLimit(60);
     app.setMouseCursorVisible(false);
 
