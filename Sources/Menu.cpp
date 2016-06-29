@@ -51,7 +51,7 @@ void Menu::updatePositions(){
     std::cout << updated_pos.y << "\n";
     updated_pos.x += options_padding;
 
-    for(int i = 0; i < labels.size(); i++){
+    for(unsigned int i = 0; i < labels.size(); i++){
         //if is centered x position looks like this
         // position = base_pos + (menu_size/2) -  (text_width/2)
         if(is_text_centered){
@@ -75,7 +75,7 @@ void Menu::updatePositions(){
 
 void Menu::updateState(){
 
-    for(int i = 0; i < labels.size(); i++){
+    for(unsigned int i = 0; i < labels.size(); i++){
         if(selected_option_nr == i){
             labels[i].setColor(sf::Color::Red);
         }
@@ -116,7 +116,7 @@ sf::RectangleShape Menu::getMenuRectangle(){
     float rectangle_width = 0;
     float rectangle_height = 0;
     int longest_text_width = 0;
-    for(int i = 0; i < labels.size(); i++){
+    for(unsigned int i = 0; i < labels.size(); i++){
         if(labels[i].getLocalBounds().width > longest_text_width)
             longest_text_width = labels[i].getLocalBounds().width;
         //std::cout << updated_pos.y << "\t";

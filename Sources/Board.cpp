@@ -41,13 +41,11 @@ Board::~Board()
 }
 
 void Board::recalculateBorderAndTexts(int view_width, int view_heigth){
-    int base_width = 800;
-    int base_height = 600;
 
     // dlugosc jest rowna bazowej dlugosci minus margines z lewej(domyslny) i prawej
-    float result_width = base_width - default_margin - right_margin;
+    float result_width = view_width - default_margin - right_margin;
     // wysokosc jest rowna bazowej minus 2 razy margines domyslny(z gory i dolu)
-    float result_height = base_height - default_margin - default_margin;
+    float result_height = view_heigth - default_margin - default_margin;
     border_box.setPosition(float(default_margin),float(default_margin));
     border_box.setSize(sf::Vector2f(result_width,result_height));
 
@@ -106,7 +104,7 @@ void Board::update(bool is_game_paused){
         frame_nr = 0;
 
         // lets check is collision between player and food
-        for(int i = 0; i < foods.size();i++){
+        for(unsigned int i = 0; i < foods.size();i++){
             //
             if(ar::isCollisionBetweeenRectangles(player.getHeadRectangle(),foods[i].getCollisionShape())){
                 // if is collision between them lets make our snake longer

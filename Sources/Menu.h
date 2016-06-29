@@ -31,7 +31,7 @@ class Menu
     protected:
     private:
         std::vector < sf::Text > labels;
-        int selected_option_nr = 0;
+        unsigned int selected_option_nr = 0;
         int font_size = 35;
         bool is_visible = true;
         bool is_active = true;
